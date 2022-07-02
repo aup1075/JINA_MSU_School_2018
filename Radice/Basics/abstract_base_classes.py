@@ -6,7 +6,8 @@ https://github.com/CodeSports/Modern-Python-Programming/blob/master/PythonABC/da
 
 import abc 
 
-# An abstract base class is a parent class of (child) classes to come. 
+# An abstract base class is a parent class of (child) classes to come. It only provides an interface and 
+# virtual functions. The child classes provide implementations. 
 
 # class providing a skeleton/interface/boiler-plate of State.
 class State(abc.ABC):
@@ -46,7 +47,7 @@ class lost_money(Event):
 class state_machine():
 
 	def __init__(self):			# Constructor/Initializer for the state machine 
-		self.currstate = HappyState()
+		self.currstate = HappyState() # Here we have passed a class constructor 
 		
 	def current_state(self):
 		print(self.currstate.in_state())
